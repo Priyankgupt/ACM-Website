@@ -1,0 +1,101 @@
+/* Coding With Nick */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+.headers{
+    text-align: center;
+    padding: 32px;
+}
+.headers h1{
+    font-family:serif;
+    font-size: 75px;
+    color: #ffff;
+}
+.headers h2{
+    font-family: sans-serif;
+    font-size: 35px;
+    color: aliceblue;
+    
+}
+#label h2 ::after
+{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+#label h2:hover ::after
+{
+    width: 100%;
+}
+#label h1 ::after
+{
+    content: '';
+    height: 5px;
+    width: 0%;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+#label h1:hover ::after
+{
+    width: 100%;
+}
+.row{
+    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 100px 100px 100px;
+}
+.column{
+    flex: 27%;
+    max-width: 35%;
+}
+.img-hover-zoom{
+    height: auto;
+    overflow: hidden;
+    border: 5px solid #ffff;
+}
+.img-hover-zoom img{
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition:  transform .5s ease;
+}
+.img-hover-zoom:hover img{
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 800px) {
+    .column{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .column{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+.background
+{
+    min-height: 140vh;
+    height: 500px;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("photo/col.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}

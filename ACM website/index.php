@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style2.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <title>GEU ACM</title>
+  <script type="text/javascript">
+    var divs = new Array();
+    divs[0] = "errFirst";
+    divs[1] = "errLast";
+    divs[2] = "errEmail";
+    divs[3] = "errContact";
+    divs[4] = "errText";
+    
+    function validate()
+	{
+      var inputs = new Array();
+      inputs[0] = document.getElementById('first').value;
+      inputs[1] = document.getElementById('last').value;
+      inputs[2] = document.getElementById('email').value;
+      inputs[3] = document.getElementById('contact').value;
+      inputs[4] = document.getElementById('text').value;
+      
+      var errors = new Array();
+      errors[0] = "<span style='color:red'>Please enter your first name!</span>";
+      errors[1] = "<span style='color:red'>Please enter your last name!</span>";
+      errors[2] = "<span style='color:red'>Please enter your email!</span>";
+      errors[3] = "<span style='color:red'>Please enter your contact!!</span>";
+      errors[4] = "<span style='color:red'>Please enter your text</span>";
+  
+      for (i in inputs)
+      {
+        var errMessage = errors[i];
+        var div = divs[i];
+        if (inputs[i] == "")
+        	document.getElementById(div).innerHTML = errMessage;
+        else if (i==2)
+        {
+          var atpos=inputs[i].indexOf("@");
+          var dotpos=inputs[i].lastIndexOf(".");
+          if (atpos<1 || dotpos<atpos+2 || dotpos+2>=inputs[i].length)
+        	document.getElementById('errEmail').innerHTML = "<span style='color: red'>Enter a valid email address!</span>";
+          else
+        	document.getElementById(div).innerHTML = "OK!";
+        }
+          else
+        	document.getElementById(div).innerHTML = "OK!";
+       }
+     }
+        function finalValidate()
+        {
+          var count = 0;
+          for(i=0;i<5;i++)
+          {
+            var div = divs[i];
+            if(document.getElementById(div).innerHTML == "OK!")
+            count = count + 1;
+          }
+          if(count == 5)
+          	document.getElementById("errFinal").innerHTML = "All the data you entered is correct!!!";
+        }
+   </script>
+</head>
+<body>
+  <!---Navbar-->
+  <section class = "header1">
+    <nav>
+      
+      <a href = "file.html"><img src = "photo/logos.png" style="width: 200px; align-items: left;"></a>
+        <div class = "nav-links">
+            <ul class="animate_animated animate__bounceInDown">
+             
+                <li><a href = "file.html" style="color: aliceblue;">HOME</a></li>
+                <li><a href = "about.html" style="color:aliceblue">ABOUT</a></li>
+                <li><a href = "events.html" style="color: aliceblue;">EVENTS</a></li>
+                <li><a href = "connect.html" style="color: aliceblue;">JOIN US</a></li>
+
+            <ul>
+        </div>
+    </nav>   
+</section>
+
+ 
+  <!---Joining Form-->
+  <section class="joining-form" style="position: absolute; left: 100px; top: 300px;">
+      <div class="container">
+        <div>
+          <h2 style="color: aliceblue;">Connect with GEU ACM</h2>
+          <a href="mailto:acm.geu@gmail.com"><button  class="btn btn-danger btn-block mb-3" style="margin-left: 0px; background-color: rgb(196,55,55); color: aliceblue;">Write to us</button></a>
+          <br/>
+          <br/>
+         </div>
+          
+          <form class="row g-3" name="myform" method="post" action="insert.php">
+            <div class="col-md-6">
+                <label for="firstname" class="form-label" style="color: aliceblue;" name="fname">First Name</label>
+                <input type="text" id="firstname" class="form-control" placeholder="Your Name" onkeyup="validate();">
+            </div>
+            <div class="col-md-6">
+                <label for="lastname" class="form-label" style="color: aliceblue;" name="lname">Last Name</label>
+                <input type="text" id="lastname" class="form-control" placeholder="Last Name" onkeyup="validate();">
+            </div>
+            <div class="col-md-8">
+                <label for="email" class="form-label" style="color: aliceblue;" name="mail">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="xyz321@gmail.com" onkeyup="validate();">
+            </div>
+            <div class="col-md-4">
+                <label for="phone" class="form-label" style="color: aliceblue;" name="phone">Phone</label>
+                <input  id="phone" class="form-control" placeholder="+91-xxxx xxx xxx" onkeyup="validate();">
+            </div>
+            <div class="col-md-12 pb-2">
+                <label for="query" class="form-label" style="color: aliceblue;" name="query">Any Queries ?</label>
+                <textarea name="query" id="query" cols="30" rows="5" class="form-control" placeholder="Your Queries" onkeyup="validate();"></textarea>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-danger btn-block mb-3" style="color: aliceblue;" id="create" value="Create" name="submit">Submit</button>
+            </div>
+          </form>
+      </div>
+      
+  </section>
+
+  
+
+<!---Footer-->
+<footer class="site-footer p-4 bg-dark text-white text-center position-relative">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-4 mb-5">
+          <h2>About us <br> </h2>
+          <img class="img-fluid" width=120px src="photo/logos.png" alt="">
+          <p>
+            GEU ACM is a student-run organization that aims to promote the development of students in the field of computer science.
+            We aim to provide a platform for students to learn and grow in their field of interest.
+            We also aim to provide a platform for students to interact with each other and share their knowledge.
+          </p>
+        </div>
+        <div class="col-md-4 mb-5">
+          <h2>Quick Links</h2>
+          <ul class="list-unstyled footer-link">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="connect.html">Join us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Socials</h2>
+          <ul class="list-unstyled footer-link">
+            <li><a href="https://www.facebook.com/acmgeu"><i class="bi bi-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/geu-acm/"><i class="bi bi-linkedin"></i> Linkedin</a></li>
+            <li><a href="https://www.instagram.com/geuacm/"><i class="bi bi-instagram"></i> Instagram</a></li>
+        </div>
+      </div>
+      <hr>
+      <p class="lead">
+        Copyright &copy; 2022 GEU ACM. All rights reserved.
+      </p>
+      <a href="#" class="position-absolute bottom-0 end-0 p-4">
+        <i class="bi bi-arrow-up-circle h1"></i>
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+</body>
+</html>

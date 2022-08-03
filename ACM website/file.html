@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>GEU ACM</title>
+    <!-- to link css file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- to link the cross button icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <!-- to add menu bar icon -->
+</head>
+
+<body>
+    <section class="header">
+        <nav class="animate__animated animate__bounceInDown">
+            <a href="file.html"><img src="photo/logos.png"></a>
+            <div class="nav-links" id="navLinks">
+                <!-- to insert cross button -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="file.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="connect.html">JOIN US</a></li>
+                    <ul>
+            </div>
+            <i class="fa fa-bars"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1 class="animate__animated animate__bounceInDown">GEU ACM <br />
+                Student Chapter</h1>
+            <p class="animate__animated animate__bounceInUp">
+                GEU ACM is a student-run organization that aims to promote the development of students in the field of
+                computer science.
+                We aim to provide a platform for students to learn and grow in their field of interest.
+                We also aim to provide a platform for students to interact with each other and share their knowledge.
+            </p>
+            <div class="animate__animated animate__bounceInUp"><a href="connect.html" class="connect">Connect with
+                    us</a></div>
+
+        </div>
+    </section>
+    <!-----About Us----->
+    <section class="AboutUs">
+        <h1>About Us</h1><br /><br />
+        <h2>GEU</h2>
+        <p> Graphic Era Deemed to be University(GEU), formerly known as Graphic Era Institute of Technology,
+            is one of the leading universities in developing India as it has become a popular university in a concise
+            span of time.
+            It has also been ranked 64th by the NIRF in 2021 rankings. The university offers Undergraduate,
+            Postgraduate, and
+            Doctoral programs in streams like Engineering, Management, Computer Application, Humanities & Social
+            Sciences, Commerce,
+            Life Sciences, Hotel management, and Hospitality. Among these the most popular courses are B.Tech, B.Sc, and
+            B.E.</p>
+        <a href="https://www.geu.ac.in/content/geu/en.html"><button class="AboutGEU">Know More</button></a>
+
+        <br />
+        <br />
+        <br />
+        <h2 style="text-align: center">ACM</h2>
+        <p> ACM stands for Association for Computing Machinery, aims to bring together the computing educators,
+            researchers, and professionals to inspire dialogue, share resources, and address the field's challenges.ACM
+            strengthens the
+            profession's collective voice through strong leadership, promotion of the highest standards, and recognition
+            of technical excellence. ACM supports the professional growth of its
+            members by providing opportunities for life‐long learning, career development, and professional networking.
+            ACM provides a platform to the students and the pofessionals as well to showcase their leadership skills via
+            Student and Professional
+            Chapters, that create networking possibilities and enhance career development. It offers volunteer roles for
+            its members and
+            non-members as well. </p>
+        <a href="https://www.acm.org/about-acm/about-the-acm-organization"><button class="AboutGEU">Know
+                More</button></a>
+        <br />
+        <br />
+        <br />
+        <h2>GEU ACM</h2>
+        <p>GEU holds ACM's Student Chapter as GEU ACM Student Chapter which is a student-run organization that aims to
+            promote the wholesome development
+            of students in the various spheres of lives. We aim to provide a stage for students to learn and grow as an
+            individual and as a team
+            as well in their field of interests.
+            The chapter firmly believes that quality is better than quantity, and based on that we have some specific
+            domains on which we work together
+            for the development of the team and the society as well. The events we conduct are purely with the mindset
+            that each and every participant
+            must have something fruitful at the end of it.</p>
+
+        <br />
+        <h2>GEU ACM-W</h2>
+        <p>The ACM community is as diverse as the subfields that comprise computer science, from educators and
+            researchers in academia
+            to practitioners in project management, industrial research, and software development, engineering, and
+            application design.
+            This diversity extends to their gender and ethnicities with its Women's Chapters.<br />
+            GEU ACM-W Student Chapter, strongly believes that there is no force equal to a woman determined to rise. We
+            have witnessed ourselves
+            as a leader in different sectors and now its time to represent ourselves in our own college and in the
+            communities in outside world
+            as strong individuals. GEU ACM-W celebrates and tends to amplify women empowerment, while inspiring, and
+            uplifting all the women
+            out there for the world to hear us roar louder, watch us soar higher!!</p>
+             <!-- java Script Toggle menu -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+
+            }
+
+        </script>
+
+        <!---Our Instructors-->
+        <section data-aos="fade-up" class="p-5 bg-transparent text-black">
+            <div class="container">
+                <h2 class="text-center text-black">Our Instructor</h2>
+                <p class="lead text-center text-black mb-5">
+                    We are proud to have ourselves a dedicated and experienced instructor who guides us at each step,
+                    and motivates our spirit.
+                </p>
+                <div id="instructors" class="row g-4">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="photo/ma'am.jpeg" width=125px class="rounded-circle mb-3" alt="">
+                                <h3 class="card-title mb-3"> Ms.Sarishma</h3>
+                                <p class="card-text" style="text-align: center;">
+                                    Assistant Professor
+                                    <br> Graphic Era Deemed <br>to be University<br>
+                                    Dehradun
+                                </p>
+                                <a
+                                    href="https://in.linkedin.com/in/sarishma-dangi-575172229?trk=public_profile_browsemap"><i
+                                        class="bi bi-linkedin text-dark mx-1"></i></a>
+                                <a href="https://gmail.com/"><i class="bi bi-envelope-fill text-dark mx-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--Our Office bearers-->
+
+        <section data-aos="fade-up" class="p-2 bg-transparent">
+            <div class="office-container">
+                <h2 class="offb text-center text-black">Our Office Bearers</h2>
+                <p class="offb lead text-center text-black mb-3">
+                    We are proud to have a team of well experienced and dedicated office bearers.
+                </p>
+
+                <input type="radio" name="dot" id="one">
+                <input type="radio" name="dot" id="two">
+                <div class="main-card">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/Diksha.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Diksha Bisht</div>
+                                    <div class="position">Chair</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/divya_diksha7/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/diksha-bisht-7236411b7" target="_blank"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Dikshabisht7" target="_blank"><i
+                                            class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/profile.jpeg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Ayush Gupta</div>
+                                    <div class="position">Vice Chair</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/risky__whiskey__/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/ayu-gupta/" target="_blank"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Ayushguptaa22" target="_blank"><i
+                                            class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/Gaurangi Tripathi.jfif" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Gaurangi Tripathi</div>
+                                    <div class="position">Secretary</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/crazy_._gal_._/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/gaurangi-tripathi-86a293211/"
+                                        target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Coder-Gaurangi" target="_blank"><i
+                                            class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/Priyank Gupta.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Priyank Gupta</div>
+                                    <div class="position">Membership Chair</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/crazy_.boi._/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/priyank-gupta-91121b192/" target="_blank"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Priyankgupt"><i class="fab fa-github"
+                                            target="_blank"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="cards">
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/Harsh Vardhan Singh Rawat.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Harsh Vardhan</div>
+                                    <div class="position">Web Master</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/harshvardhansinghrawat/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/harsh-vardhan-singh-rawat-7a8679196/"
+                                        target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Harshvardhansinghrawat" target="_blank"><i
+                                            class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/Vaibhav jain.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Vaibhav Jain</div>
+                                    <div class="position">Treasurar</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://instagram.com/jain_sahab101?utm_medium=copy_link"
+                                        target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/vaibhav-jain-852420201" target="_blank"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com"><i class="fab fa-github" target="_blank"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/ABHINAV MOHAN BHATIA.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Abhinav Bhatia</div>
+                                    <div class="position">Technical Head</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/abhinavm.bhatia/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/abhinav-mohan-bhatia-30548918a"
+                                        target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Abhinav0002"><i class="fab fa-github"
+                                            target="_blank"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="photo/Anshul.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Anshul Pandey</div>
+                                    <div class="position">Management Head</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="https://www.instagram.com/anshul.pandey21/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/anshul-pandey-3800071ab/" target="_blank"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/kodexbreaker" target="_blank"><i class="fab fa-github"
+                                            target="_blank"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="button">
+                    <label for="one" class="one active"></label>
+                    <label for="two" class="two"></label>
+                </div>
+            </div>
+        </section>
+    </section>
+
+       
+
+        <!---Footer-->
+<footer class="site-footer p-4 bg-dark text-white text-center position-relative">
+     <div class="container">
+         <div class="row mb-5">
+            <div class="col-md-4 mb-5">
+                <h2>About us <br> </h2>
+                    <img class="img-fluid" width=120px src="photo/logos.png" alt="">
+                        <p>
+                            GEU ACM is a student-run organization that aims to promote the development of students in
+                            the field of computer science.
+                            We aim to provide a platform for students to learn and grow in their field of interest.
+                            We also aim to provide a platform for students to interact with each other and share their
+                            knowledge.
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h2>Quick Links</h2>
+                        <ul class="list-unstyled footer-link">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="connect.html">Join us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Socials</h2>
+                        <ul class="list-unstyled footer-link">
+                            <li><a href="https://www.facebook.com/acmgeu"><i class="bi bi-facebook"></i> Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/company/geu-acm/"><i class="bi bi-linkedin"></i>Linkedin</a></li>
+                            <li><a href="https://www.instagram.com/geuacm/"><i class="bi bi-instagram"></i>Instagram</a></li>
+                    </div>
+         </div>
+                <hr>
+                <p class="lead">
+                    Copyright &copy; 2022 GEU ACM. All rights reserved.
+                </p>
+                <a href="#" class="position-absolute bottom-0 end-0 p-4">
+                    <i class="bi bi-arrow-up-circle h1"></i>
+                </a>
+     </div>
+ </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

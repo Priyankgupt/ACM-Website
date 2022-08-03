@@ -1,0 +1,111 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+/* to aaply effects on background image */
+
+/* <-------------------------- */
+/* .header 
+{
+    min-height: 140vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("photo/col.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+} */
+
+/* to give distance(padding) from top and then from left */
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+/* to set size of image */
+nav img{
+    width: 150px;
+}
+/* to align  home, about, events, join us to right */
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+/* to display  home, about, events, join us in inline format and adjust their distance between each other */
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 2px 15px;
+    position: relative;
+}
+/* for adjusting the size of  home, about, events, join us */
+.nav-links ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+/* for underlining home, about, events, join us */
+.nav-links ul li::after
+{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+/* for displaying underline after a given amount of time */
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+@media(max-width: 700px)
+{
+    .text-box h1
+    {
+        font-size: 20px;
+    }
+    .nav-links ul li
+    {
+        display: block;
+    }
+    /* to have a slide menu for mobile view */
+    .nav-links
+    {
+        position: absolute;
+        background: rgb(75, 75, 75);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav.fa
+    {
+        display: block;
+        color: white;
+        margin-top: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul 
+    {
+        padding: 10px;
+    }
+}
+.background
+{
+    min-height: 140vh;
+    height: 500px;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("photo/col.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}

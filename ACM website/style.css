@@ -1,0 +1,514 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+/* to aaply effects on background image */
+
+/* <-------------------------- */
+.header 
+{
+    min-height: 140vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("photo/col.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* to give distance(padding) from top and then from left */
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+/* to set size of image */
+nav img{
+    width: 150px;
+}
+/* to align  home, about, events, join us to right */
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+/* to display  home, about, events, join us in inline format and adjust their distance between each other */
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 2px 15px;
+    position: relative;
+}
+/* for adjusting the size of  home, about, events, join us */
+.nav-links ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+}
+/* for underlining home, about, events, join us */
+.nav-links ul li::after
+{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+/* for displaying underline after a given amount of time */
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+/* to align the text in middle and set its colours */
+.text-box
+{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    text-align: center; 
+}
+/* to edit the main title of the page */
+.text-box h1
+{
+    font-size: 60px;
+}
+/* to adjust margin of paragraph distance from top, left-right and bottom*/
+.text-box p
+{
+    margin: 35px 150px 35px;
+    font-size: 30px;
+}
+/* to apply effects on connect to us button(its border and the padding between it) */
+.connect
+{
+    margin: 35px 0px 0px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    padding: 12px 28px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/* to adjust the connect with us button transitions(colored  block) */
+.connect:hover
+{
+    border: 1px solid rgb(117, 117, 117);
+    background: rgb(117, 117, 117);
+    transition: 0.5s;
+}
+nav .fa
+{
+    display: none;
+}
+
+/* to enable the site to be viwed in mobile friendly view */
+@media(max-width: 700px)
+{
+    .text-box h1
+    {
+        font-size: 20px;
+    }
+    .nav-links ul li
+    {
+        display: block;
+    }
+    /* to have a slide menu for mobile view */
+    .nav-links
+    {
+        position: absolute;
+        background: rgb(75, 75, 75);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav.fa
+    {
+        display: block;
+        color: white;
+        margin-top: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul 
+    {
+        padding: 10px;
+    }
+}
+/* AboutUs */
+/* AboutUs */
+.AboutUs
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+h1
+{
+    font-size: 50px;
+    font-weight: 600;
+}
+.AboutUs p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 500px;
+    line-height: 22px;
+    padding: 10px;
+    text-align: justify;
+}
+.AboutGEU
+{
+    margin: 10px 0px 0px;
+    /* display: inline-block; */
+    text-decoration: none;
+    color: red;
+    border: 2px solid red;
+    padding: 5px 8px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+/* to adjust the connect with us button transitions(colored  block) */
+.AboutGEU:hover
+{
+    border: 1px solid rgb(240, 114, 114);
+    background: rgb(240, 114, 114);
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+}
+.row
+{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.Course-col
+{
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.Course-col:hover
+{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+@media(max-width: 700px)
+{
+  .row
+  {
+      flex-direction: column;
+  }
+}
+
+.office-container{
+    min-width: 950px;
+    width: 100%;
+    overflow: hidden;
+    padding: 80px 0;
+    justify-content: space-evenly;
+  }
+.office-container .main-card{
+    width: 200%;
+    display: flex;
+    transition: all 1s ease;
+    justify-content: space-around;
+}
+#two:checked ~ .main-card{
+    margin-left: -100%;
+}
+.main-card .cards{
+    width: calc(100% /2 -10px);
+    display: flex;
+    justify-content: space-around;
+    margin: 0 30px;
+    flex-wrap: wrap;
+}
+.main-card .cards .card{
+    background: #fff;
+    width: calc(100% / 3-10px);
+    padding: 30px;
+    border-radius: 24px;
+    transition: all 0.5s ease;
+    margin: 20px;
+}
+.main-card .cards .card:hover{
+    transform: translateY(-15px);
+}
+.cards .card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cards .card .content .img{
+    height: 130px;
+    width: 130px;
+    margin-bottom: 14px;
+    background: brown;
+    border-radius: 50%;
+    padding: 3px;
+}
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.card .content .details .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card .content .details .job{
+    font-size: 14px;
+    font-weight: 400;
+    color: brown;
+}
+.card .content .media-icons{
+    display: flex;
+    margin-top: 10px;
+}
+.card .content .media-icons a{
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background: rgb(211, 43, 43);
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+.content .media-icons a:hover{
+    border-color: rgb(211, 43, 43);
+    color: rgb(211, 43, 43);
+    background: #fff;
+}
+#images_phone{
+    position: relative;
+}
+.font{
+    font-family: 'Roboto', sans-serif;
+}
+#home_content{
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.home-content{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 25px;
+}
+#welcome{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 1px 15px white;
+}
+#strong{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px 15px white;
+}
+#text{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px 15px white;
+}
+#learnmore{
+    margin-left: 40%;
+    color: white;
+}
+#instructors{
+    width: auto;
+    justify-content: center;
+    overflow-x: hidden;
+}
+#contact-info{
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.office-container{
+    min-width: 950px;
+    width: 100%;
+    overflow: hidden;
+    padding: 80px 0;
+    justify-content: space-evenly;
+  }
+.office-container .main-card{
+    width: 200%;
+    display: flex;
+    transition: all 1s ease;
+    justify-content: space-around;
+}
+#two:checked ~ .main-card{
+    margin-left: -100%;
+}
+.main-card .cards{
+    width: calc(100% /2 -10px);
+    display: flex;
+    justify-content: space-around;
+    margin: 0 30px;
+    flex-wrap: wrap;
+}
+.main-card .cards .card{
+    background: #fff;
+    width: calc(100% / 3-10px);
+    padding: 30px;
+    border-radius: 24px;
+    transition: all 0.5s ease;
+    margin: 20px;
+}
+.main-card .cards .card:hover{
+    transform: translateY(-15px);
+}
+.cards .card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cards .card .content .img{
+    height: 130px;
+    width: 130px;
+    margin-bottom: 14px;
+    background: brown;
+    border-radius: 50%;
+    padding: 3px;
+}
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.card .content .details .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card .content .details .job{
+    font-size: 14px;
+    font-weight: 400;
+    color: brown;
+}
+.card .content .media-icons{
+    display: flex;
+    margin-top: 10px;
+}
+.card .content .media-icons a{
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background: rgb(211, 43, 43);
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+.content .media-icons a:hover{
+    border-color: rgb(211, 43, 43);
+    color: rgb(211, 43, 43);
+    background: #fff;
+}
+.button{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    background: rgb(211, 43, 43);
+    border-radius:20px;
+    margin: 0 4px;
+    transition: all 0.5s ease;
+}
+.button label.active{
+    width: 35px;
+}
+
+#one:checked ~ .button label.one{
+    width: 35px;
+}
+#two:checked ~ .button label.two{
+    width: 35px;
+}
+#two:checked ~ .button label.one{
+    width: 15px;
+}
+#one:checked ~ .button label.two{
+    width: 15px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.card{
+  border-radius: 10px;
+}
+
+/* image slider */
+.carousel-cell::before{
+  content: "";
+  display: block;
+}
+
+@media (max-width: 768px){
+    .main-card .cards .card{
+        width: calc(100% / 2-10px);
+        margin: 20px 0 10px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .office-container .offb{
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+}
